@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Login and Register page</title>
     <link rel="stylesheet" href="style.css">
@@ -8,15 +7,16 @@
     <div class="hero">
         <div class="form-box">
             <div class="button-box">
+                <div id="btn"></div>
                 <button type="button" class="toggle-btn" onclick="login()">Log In</button>
                 <button type="button" class="toggle-btn" onclick="register()">Register</button>
             </div>
-        </div>
-        <div class="social-icons">
-            <img src="fb.png">
-            <img src="tw.png">
-            <img src="gp.png">
-        </div>
+            <div class="social-icons">
+                <img src="fb.jpg">
+                <img src="tw.png">
+                <img src="gp.jpg">
+            </div>
+        
         <form id="Login" class="input-group">
             <input type="text" class="input-field" placeholder="User Id" required>
             <input type="text" class="input-field" placeholder="Enter Password" required>
@@ -30,6 +30,7 @@
             <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
             <button type="submit" class="submit-btn ">Register</button>
             </form>
+        </div>
     </div>
     <script>
         var x = document.getElementById("login");
