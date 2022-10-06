@@ -1,22 +1,36 @@
 <?php
-$depart=$_POST['depart'];
-$destination=$_POST['destination'];
-$departureDate=$_POST['departureDate'];
-$destinationDate=$_POST['destinationDate'];
+$depart = $_POST["depart"];
+$destination = $_POST["destination"];
+$departureDate = $_POST["depatureDate"];
+$destinationDate = $_POST["destinationDate"];
 
-$conn =new mysqli('localhost','root','','','airline');
-if($conn->connect_error)
+$host= "localhost";
+$dbname = "airlineDB";
+$username = "root";
+$password = "";
+
+$conn = mysqli_connect(hostname: $host,
+                       username: $username,
+                       password: $password,
+                       database: $dbname);
+if (mysqli_connect_errno())
 {
-die('Connection Failed : '.$conn->connect_error);
+    die("Connection error : " . mysqli_connect_error());
 }
-else
+ 
+$sql = "INSERT INTO ticket (depart,destination,departureDate,destinationDate)
+        VALUES (?,?,?,?)";
+
+$stmt =mysqli_stmt_init($conn);
+
+if( ! mysqli_stmt_prepare($stmt,$sql))
 {
-    $stmt =$conn->prepare("insert into ticket(depart,destination,departureDate,destinationDate)
-    values(?,?,?,?)");
-    $stmt->bind_param("ssii",$depart,$destination,$depatureDate,$destinationDate);
-    $stmt->execute();
-    echo "Booked the ticket successfully";
-    $stmt->close();
-    $conn->close();
+    die(mysqli_error($conn));
 }
+
+mysqli_stmt_bind_param($stmt, "ssii",$depart,$destination,$depatureDate,$destinationDate);
+
+mysqli_stmt_execute($stmt);
+
+echo "Record saved.";
 ?>
