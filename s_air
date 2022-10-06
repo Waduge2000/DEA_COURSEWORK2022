@@ -1,4 +1,13 @@
 <html>
+<head>
+     <style>
+        body{background-image:url("airline2.webp");
+        background-size :cover;
+    }
+    a:link{color:black;}
+     </style>   
+        
+    </head>
 <body>
 <ul>
     <li><a href="#">BOOK A TRIP</a></li>
