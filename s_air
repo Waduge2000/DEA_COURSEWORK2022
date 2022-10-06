@@ -6,16 +6,23 @@
     }
     a:link{color:black;}
      </style>   
-        
+       <br><br><br><br>
+     <center><h1>BOOK A FLIGHT</h1></center>
+     <br><br><br><br>
+     <script>
+         function validate()
+         {
+          if(document.form1.depart.selectedIndex==0)
+         {alert("Departure Country Shouldn't Be Empty")}
+         if(document.form1.destination.selectedIndex==0)
+         {alert("Destination Country Shouldn't Be empty")}
+         } 
+      </script>
     </head>
 <body>
-<ul>
-    <li><a href="#">BOOK A TRIP</a></li>
-    <li><a href="#">MANAGING BOOKING</a></li>
-    <li><a href="#">CHECK-IN</a></li>
-</ul>
+
 <table>
-<form>
+<form method="POST" name="form1" onSubmit="validate()">
     <select id="country" name="depart">
         <option>select departure</option>
         <option value="AF">Afghanistan</option>
@@ -272,7 +279,7 @@
         <option value="ZW">Zimbabwe</option>
     </select>
     <br>
-    <select id="country" name="dest">
+  <select id="country" name="destination">
         <option>select destination</option>
         <option value="AF">Afghanistan</option>
         <option value="AX">Aland Islands</option>
@@ -528,10 +535,16 @@
         <option value="ZW">Zimbabwe</option>
     </select>
         <h2>Departure</h2>
-            <input type="date" name="Departure" value="" />
+            <label for="departureDate"></label>
+            <input type="date" name="departureDate" value="" required/>
             <h2>Return</h2>
-            <input type="date" name="Departure" value="" />   
-
+            <label for="destinationDate"></label>
+            <input type="date" name="destinationDate" value=""required />
+            <br><br><br>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+                 <td><input type="reset" value="Cancel"></td>
+                 </tr>
             
 </form>
 </table>
