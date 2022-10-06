@@ -527,8 +527,10 @@
         <option value="ZM">Zambia</option>
         <option value="ZW">Zimbabwe</option>
     </select>
-            <input type="text" name="name" value="" />
+        <h2>Departure</h2>
             <input type="date" name="Departure" value="" />
+            <h2>Return</h2>
+            <input type="date" name="Departure" value="" />   
 
             
 </form>
