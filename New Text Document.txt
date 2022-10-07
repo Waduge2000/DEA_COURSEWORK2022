@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Travel website</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="travel.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav>
+               <input type="radio" name="tab" id="home" checked>
+               <input type="radio" name="tab" id="Book_Flight">
+               <input type="radio" name="tab" id="Travel-Info">
+               <input type="radio" name="tab" id="hotels">
+               <input type="radio" name="tab" id="LogIn">
+               <label for="home" class="home"><a href="#"><i class="fas fa-home"></i>Home</a></label>
+               <label for="Book_Flight" class="Book_Flight"><a href="#"><i class="far fa-flight"></i>Book Flight</a></label>
+               <label for="Travel-Info" class="Travel-Info"><a href="#"><i class="far fa-information"></i>Travel Info</a></label>
+               <label for="hotels" class="hotels"><a href="#"><i class="far fa-hotel"></i>hotels</a></label>
+               <label for="LogIn" class="LogIn"><a href="#"><i class="far fa-login"></i>LogIn</a></label>
+               <div class="tab"></div>
+            </nav>
+         </div>
+         <div class="body">
+            <div class="heading">
+                <h1>Travel With Us</h1>
+                <br>
+                <p>Here is the exciting travelling experience! Come and join with us and explore more beautiful places...</p>
+            <br>
+            <br>
+            <a href="#">Learn More</a>
+                </div>
+                <div class="tours">
+                    <div class="places">
+                        <h2>Australia</h2>
+                        <img src="australia.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
+                    <br>
+                    <br>
+                    <a href="#">Book Now 15% OFF</a>
+                    </div>
+                    <div class="places">
+                        <h2>Newzealand</h2>
+                        <img src="newzealand.webp" style="width: 300px; height: 250px; border-radius: 12px;">
+                    <br>
+                    <br>
+                    <a href="#">Book Now 20% OFF</a>
+                    </div>
+                    <div class="places">
+                        <h2>Singapore</h2>
+                        <img src="singapore.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
+                    <br>
+                    <br>
+                    <a href="#">Book Now 25% OFF</a>
+                    </div>
+                </div>
+            </div>
+         </div>
+        <div class="footer">
+            <a href="#">Copyright</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookies</a>
+            <a href="#">Complaints</a>
+        </div>
+    </body>
+</html>
