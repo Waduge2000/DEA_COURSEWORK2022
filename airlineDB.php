@@ -5,7 +5,7 @@ $departureDate = $_POST["depatureDate"];
 $destinationDate = $_POST["destinationDate"];
 
 $host= "localhost";
-$dbname = "airlineDB";
+$dbname = "airline";
 $username = "root";
 $password = "";
 
