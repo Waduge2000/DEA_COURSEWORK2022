@@ -1,7 +1,7 @@
 <?php
 $depart = $_POST["depart"];
 $destination = $_POST["destination"];
-$departureDate = $_POST["depatureDate"];
+$departureDate = $_POST["departureDate"];
 $destinationDate = $_POST["destinationDate"];
 
 $host= "localhost";
@@ -9,10 +9,7 @@ $dbname = "airline";
 $username = "root";
 $password = "";
 
-$conn = mysqli_connect(hostname: $host,
-                       username: $username,
-                       password: $password,
-                       database: $dbname);
+$conn = mysqli_connect($host,$username, $password, $dbname);
 if (mysqli_connect_errno())
 {
     die("Connection error : " . mysqli_connect_error());
@@ -28,7 +25,7 @@ if( ! mysqli_stmt_prepare($stmt,$sql))
     die(mysqli_error($conn));
 }
 
-mysqli_stmt_bind_param($stmt, "ssii",$depart,$destination,$depatureDate,$destinationDate);
+mysqli_stmt_bind_param($stmt, "ssii",$depart,$destination,$departureDate,$destinationDate);
 
 mysqli_stmt_execute($stmt);
 
